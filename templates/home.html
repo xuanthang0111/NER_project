@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>ỨNG DỤNG</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/results.css">
+		     <script src="../static/jquery-2.0.3.min.js"></script>
+		
+		<style>
+			.button {
+				  background-color: #286090;
+				  border : none;
+				  border-color: #2e6da4;
+				  color: white;
+				  position: absolute;
+				  right: 0;
+				  text-align: center;
+				  display: inline-block;
+				  font-size: 16px;
+				  margin: 4px 2px;
+				  cursor: pointer;
+			}
+			
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color:#23a9bb;
+			  align: center;
+			}
+
+			li {
+				  float:left;
+				  margin-right: 250px;
+				  margin-left: 230px;
+			}
+
+			li a {
+			  display: inline-block;
+			  color: #124046;
+			  text-align: center;
+			  font-size:20px;
+			  padding: 14px 16px;
+			  text-decoration:none;
+			  float:none
+			 
+			}
+
+			li a:hover {
+			  background-color: #3f85c1;
+			}
+			
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            background-image: url("../static/bg.png");
+           
+        }
+		</style>
+	
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+			  <div class = "img-container2"> <img style='height: 100%; width: 100%; object-fit: contain' src="../static/banner.png" /></div>
+		</nav>
+		<ul>
+		<li><a href="/dulieu"><strong>Thông tin dữ liệu</strong></a></li>
+		<li><a href="/ketqua"><strong>Thông tin kết quả</strong></a></li>
+		</ul>
+    </head>
+
+    <body>
+            <div class="col-xs-8 col-xs-offset-2">
+                <h2 class="text-muted" color="blue" align="center"><strong>Xác định tên riêng Tiếng Việt</strong></h2>
+				<form action="phantich/" method="POST" >
+                  <textarea name="query" id ="query" rows="110" cols="110" wrap="soft" style="margin: 0px; width: 890px; height: 200px;"></textarea>
+                  <button class="button" value="Dự đoán" type="submit">Phân tích</button>
+                <p style="color:red" align="center">&nbsp;</p>
+                </form>
+				<div align="center">
+				<canvas id="myCanvas" width="200" height="50"
+				style="border:1px solid #c3c3c3;"></canvas>
+
+				<canvas id="myCanvas1" width="200" height="50"
+				style="border:1px solid #c3c3c3;"></canvas>
+
+				<canvas id="myCanvas2" width="200" height="50"
+				style="border:1px solid #c3c3c3;"></canvas>
+
+				<canvas id="myCanvas3" width="200" height="50"
+				style="border:1px solid #c3c3c3;"></canvas>
+				</div>
+
+				<script>
+				var canvas = document.getElementById("myCanvas");
+				var ctx = canvas.getContext("2d");
+				ctx.fillStyle = "red";
+				ctx.fillRect(0,0, 200, 50);
+				ctx.font = "24px Helvetica, Arial";
+				ctx.strokeText("PERSON", 50, 30);
+				</script>
+
+				<script>
+				var canvas1 = document.getElementById("myCanvas1");
+				var ctx1 = canvas1.getContext("2d");
+				ctx1.fillStyle = "blue";
+				ctx1.fillRect(0,0, 200, 100);
+				ctx1.font = "24px Helvetica, Arial";
+				ctx1.strokeText("MISCELLENOUS", 10, 30);
+				</script>
+
+				<script>
+				var canvas2 = document.getElementById("myCanvas2");
+				var ctx2 = canvas2.getContext("2d");
+				ctx2.fillStyle = "green";
+				ctx2.fillRect(0,0, 200, 100);
+				ctx2.font = "24px Helvetica, Arial";
+				ctx2.strokeText("LOCATION", 40, 30);
+				</script>
+
+				<script>
+				var canvas3 = document.getElementById("myCanvas3");
+				var ctx3 = canvas3.getContext("2d");
+				ctx3.fillStyle = "orange";
+				ctx3.fillRect(0,0, 200, 100);
+				ctx3.font = "24px Helvetica, Arial";
+				ctx3.strokeText("ORGANIZATION", 10, 30);
+				</script>
+
+
+				
+				
+            </div>
+       
+		</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Phân tích kết quả</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/results.css">
+		     <script src="../static/jquery-2.0.3.min.js"></script>
+		
+		<style>
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+			.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+			.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+			.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+			.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+			.button {
+				  background-color: #4CAF50;
+				  border: none;
+				  color: white;
+				  position: absolute;
+				  right: 0;
+				  text-align: center;
+				  display: inline-block;
+				  font-size: 16px;
+				  margin: 4px 2px;
+				  cursor: pointer;
+			}
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: #23a9bb;
+			  align: center;
+			}
+
+			li {
+				  float:left;
+				  margin-right: 210px;
+				  margin-left: 210px;
+			}
+
+			li a {
+			  display: inline-block;
+			  color: #124046;
+			  font-size:20px;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			  float: none;
+
+			}
+
+			li a:hover {
+			  background-color: #3f85c1;
+			}
+			 body {
+            font-family: 'Fira Sans', sans-serif;
+            background-image: url("../static/bg.png");
+           
+        }
+		</style>
+	
+	    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+		  google.charts.load('current', {'packages':['bar']});
+		  google.charts.setOnLoadCallback(drawChart);
+
+		  function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+			  ['Phương pháp', 'Độ chính xác', 'Độ phủ', 'F1-score'],
+			  ['BiLSTM', 78.4, 62.2,69.3],
+			  ['BiLSTM+CRF', 81.6,64.8,72.6],
+			  ['BiLSTM+Embed', 72.6,73.3,73.0],
+			  ['BiLSTM+CRF+Embed', 73.0,75.1,75.2]
+			]);
+
+			var options = {
+			  bars: 'vertical',
+			  vAxis: {format: 'decimal'},
+			  height: 400,
+			  colors: ['#1b9e77', '#d95f02', '#7570b3']
+			};
+
+			var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+			chart.draw(data, google.charts.Bar.convertOptions(options));
+		  }
+		</script>
+	
+	
+	
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+			  <div class = "img-container2"> <img style='height: 100%; width: 100%; object-fit: contain' src="../static/banner.png" /></div>
+		</nav>
+		<ul>
+		<li><a href="/"><strong>Phát hiện tên riêng</strong></a></li>
+		<li><a href="/dulieu"><strong>Thông tin dữ liệu</strong></a></li>
+		</ul>
+		
+    </head>
+
+    <body>
+            <div class="col-xs-8 col-xs-offset-2">
+                <h2 class="text-muted" color="blue" align="center"><strong>THÔNG TIN KẾT QUẢ THỰC NGHIỆM</strong></h2>		
+				<h5 class="text-muted" color="green" align="center"><strong> KẾT QUẢ MÔ HÌNH CHO BÀI TOÁN PHÁT HIỆN TÊN RIÊNG TRONG TIẾNG VIỆT</strong></h5>		
+				
+				<table class="tg" align="center">
+					<thead>
+					  <tr>
+						<th class="tg-fymr">Phương pháp</th>
+						<th class="tg-fymr">Độ chính xác</th>
+						<th class="tg-fymr">Độ phủ</th>
+						<th class="tg-fymr">Độ đo F1</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">BiLSTM</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">78.4%</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">62.2%</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">69.3%</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">BiLSTM + CRF</span></td>
+						<td class="tg-7g6k"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000">81.6%</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">64.8%</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">72.2%</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">BiLSTM + embedding</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">72.6%</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">73.3%</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">73.0%</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">BiLSTM + CRF + embedding</span></td>
+						<td class="tg-3xi5"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000">73.0%</span></td>
+						<td class="tg-7g6k"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000">75.2%</span></td>
+						<td class="tg-7g6k"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000">74.1%</span></td>
+					  </tr>
+					</tbody>
+					</table>
+				
+				<br></br>
+		    
+		    <div align="center">
+            <h4 class="text-white" align="center">
+            <strong style="color: red" align="center">Biểu đồ so sánh kết quả các phương pháp</strong>			
+            </h4>
+    		<div class="container5" align="center">
+    					<div id="columnchart_material" style="width: 600px; height: 300px; align: center;"></div>
+    		</div>
+    		<br></br><br></br>
+				
+                <p>&nbsp;</p>
+            <p>&nbsp;</p>
+           	</div>	
+
+            </div>
+           		
+		</div>
+        </div>
+    </body>
+     <p>&nbsp;</p>
+            <p>&nbsp;</p>	
+</html>

@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>ỨNG DỤNG</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/results.css">
+		<script src="../static/jquery-2.0.3.min.js"></script>
+		
+		
+		<style>
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color:#23a9bb;
+			  align: center;
+			}
+
+			li {
+				  float:left;
+				  margin-right: 210px;
+				  margin-left: 210px;
+			}
+
+			li a {
+			  display: inline-block;
+			  color: #124046;
+			  font-size:20px;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			  float: none;
+
+			}
+
+			li a:hover {
+			  background-color: #3f85c1;
+			}
+			 body {
+            font-family: 'Fira Sans', sans-serif;
+            background-image: url("../static/bg.png");
+			}
+			
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-baqh{text-align:center;vertical-align:top}
+			.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+		</style>
+	
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+			  <div class = "img-container2"> <img style='height: 100%; width: 100%; object-fit: contain' src="../static/banner.png" /></div>
+		</nav>
+		<ul>
+		<li><a href="/"><strong>Phát hiện tên riêng</strong></a></li>
+		<li><a href="/ketqua"><strong>Thông tin kết quả</strong></a></li>
+		</ul>
+    </head>
+
+    <body>
+        <div class="container" >
+         
+            <div class="col-xs-8 col-xs-offset-2">
+                <h2 class="text-muted" color="red" align="center"><strong>THÔNG TIN DỮ LIỆU HUẤN LUYỆN</strong></h2>
+                <p color="blue" align="center">&nbsp;</p>
+				<h5 class="text-muted" color="green" align="center"><strong> Bảng 1 :Các thông tin về dữ liệu nghiên cứu trong đề tài</strong></h5>		
+				
+				<table class="tg" align="center">
+				<thead>
+				  <tr>
+					<th class="tg-amwm"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Loại nhãn</span></th>
+					<th class="tg-amwm"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Số lượng</span></th>
+					<th class="tg-amwm"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Phần trăm</span></th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Tên người - PERSON</span></td>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">1294</span></td>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">43.22%</span></td>
+				  </tr>
+				  <tr>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Tên địa điểm - LOCATION</span></td>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">1379</span></td>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">46.06%</span></td>
+				  </tr>
+				  <tr>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Tên tổ chức - ORGANIZATION</span></td>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">274</span></td>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">9.15%</span></td>
+				  </tr>
+				  <tr>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Nhãn khác - MISCELLANEOUS</span></td>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">49</span></td>
+					<td class="tg-baqh"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">1.64%</span></td>
+				  </tr>
+				  <tr>
+					<td class="tg-amwm"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Tổng</span></td>
+					<td class="tg-amwm"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">2994</span></td>
+					<td class="tg-amwm"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">100%</span></td>
+				  </tr>
+				</tbody>
+				</table>
+				<br></br>
+				<br></br>
+            </div>
+			
+
+  
+    </div>
+           <p width="20px" color="blue" align="center">&nbsp;</p>
+           <p color="blue" align="center">&nbsp;</p>
+           <p color="blue" align="center">&nbsp;</p>
+    </body>
+</html>
